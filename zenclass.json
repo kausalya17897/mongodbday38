@@ -1,0 +1,210 @@
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Design database for Zen class programme
+users
+codekata
+attendance
+topics
+tasks
+company_drives
+mentors
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+*CREATE DATABASE ZENCLASS
+use ZENCLASS;
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+*create collection users
+db.collection("users");
+
+db.users.insertMany([
+    {
+        userid:1,
+        name:"Kausalya"
+        email:"kausalya@gmail.com"
+    },
+    {
+        userid:2,
+        name:"Subasri"
+        email:"subasri@gmail.com"
+    },
+    {
+        userid:3,
+        name:"Goverthini"
+        email:"goverthini@gmail.com"
+    },
+    {
+        userid:4,
+        name:"Madhu"
+        email:"madhu@gmail.com"
+    },
+    {
+        userid:5,
+        name:"Priscilla"
+        email:"prisci@gmail.com"
+    }
+])
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+*create collection codekata and insert data
+db.collection("codekata");
+
+db.codekata.insertMany([
+    {
+        userid:1,
+        problems:90
+    },
+    {
+        userid:2,
+        problems:70
+    },
+    {
+        userid:3,
+        problems:80
+    },
+    {
+        userid:4,
+        problems:60
+    },
+    {
+        userid:5,
+        problems:100
+    },
+])
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+*create collection attendance and insert data
+db.collection("attendance");
+
+db.codekata.insertMany([
+    {
+        userid:1,
+        problems:"90%"
+    },
+    {
+        userid:2,
+        problems:"80%"
+    },
+    {
+        userid:3,
+        problems:"90%"
+    },
+    {
+        userid:4,
+        problems:"70%"
+    },
+    {
+        userid:5,
+        problems:"90%"
+    },
+])  
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+*create collection topics and insert data
+db.collection("topics");
+
+db.codekata.insertMany([
+    {
+        topicid:1,
+        topic:"HTML",
+        topic_date:new Date("4-oct-2020")
+    },
+    {
+        topicid:2,
+        topic:"CSS",
+        topic_date:new Date("11-oct-2020")
+    },
+    {
+        topicid:3,
+        topic:"BOOTSTRAP",
+        topic_date:new Date("18-oct-2020")
+    },
+    {
+        topicid:2,
+        topic:"CSS",
+        topic_date:new Date("25-oct-2020")
+    },
+    { topicid:2,
+        topic:"CSS",
+        topic_date:new Date("10-oct-2020")
+    },
+])  
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+*create collection tasks and insert data
+db.collection("tasks");
+
+db.tasks.insertMany([
+    {
+        taskid:1,
+        topicid:1,
+        userid:1,
+        task:"HTML task",
+        due_date:new Date("4-oct-2020"),
+        submitted:true
+    },
+    {
+        taskid:2,
+        topicid:2,
+        userid:2,
+        task:"CSS task",
+        due_date:new Date("11-oct-2020"),
+        submitted:true
+    },
+    {
+        taskid:3,
+        topicid:3,
+        userid:3,
+        task:"Bootstrap task",
+        due_date:new Date("18-oct-2020"),
+        submitted:false
+    },
+    {
+        taskid:4,
+        topicid:4,
+        userid:4,
+        task:"Javascript task",
+        due_date:new Date("25-oct-2020"),
+        submitted:true
+    },
+    {
+        taskid:5,
+        topicid:5,
+        userid:5,
+        task:"REACT JS task",
+        due_date:new Date("10-oct-2020"),
+        submitted:false
+    }
+])
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+*create collection companydrives and insert data
+db.collection("companydrives");
+
+db.tasks.insertMany([
+    {
+        userid:1,
+        drive_date:new Date("5-oct-2020"),
+        company:"Amazon"
+    },
+    {
+        userid:2,
+        drive_date:new Date("18-oct-2020"),
+        company:"TCS"
+    },
+    {
+        userid:3,
+        drive_date:new Date("21-oct-2020"),
+        company:"ITC"
+    },
+    {
+        userid:4,
+        drive_date:new Date("5-oct-2020"),
+        company:"TCS"
+    },
+    {
+        userid:5,
+        drive_date:new Date("13-nov-2020"),
+        company:"Amazon"
+    },
+])
+
